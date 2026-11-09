@@ -1,0 +1,171 @@
+/* NEW CSS BELOW */
+
+/* Custom fonts/cohesive color scheme/custom margins and padding */
+
+:root{
+    --forest:   #2f5d50;
+    --forest-dk:#1f3f36;
+    --cream:    #f4f1ea;
+    --paper:    #ffffff;
+    --coral:    #e07a5f;
+    --ink:      #2b2b2b;
+    --muted:    #6b6b6b;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+h1, h2, h3{
+    font-family: "Playfair Display", Georgia, serif;
+    color: var(--forest);
+    line-height: 1.2;
+}
+
+.main-title{ font-size: 3rem;   margin: 0 0 0.25rem; letter-spacing: 0.5px; }
+.page-title{ font-size: 2.2rem; margin: 0 0 1.5rem; }
+h3{ font-size: 1.5rem; margin-top: 0; }
+
+.subtitle{ color: var(--muted); font-size: 1.2rem; margin: 0 0 2rem; font-style: italic; }
+.caption { color: var(--muted); font-size: 0.95rem; }
+
+a{ color: var(--coral); }
+
+.page{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.card{
+    background: var(--paper);
+    border-radius: 14px;
+    padding: 2rem 2.25rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.intro{
+    display: flex;
+    gap: 2.25rem;
+    align-items: flex-start;
+}
+.intro-text h2{ margin-top: 0; }
+
+.profile-photo{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 5px solid var(--forest);
+    flex-shrink: 0;
+}
+
+.banner{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.cta{
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--coral);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.cta:hover{ background: var(--forest); }
+
+.styled-list li{ margin-bottom: 0.4rem; }
+.styled-list li::marker{ color: var(--coral); }
+
+.contact-links{ list-style: none; padding: 0; }
+.contact-links li{ margin-bottom: 0.5rem; }
+.contact-links a{ font-weight: 600; text-decoration: none; }
+.contact-links a:hover{ text-decoration: underline; }
+
+#d3-vis .chart{ width: 100%; height: auto; }
+.bar{ fill: var(--forest); transition: fill 0.15s; }
+.bar:hover{ fill: var(--coral); }
+.tooltip{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    background: var(--ink);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* OLD CSS BELOW */
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--forest);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#account-container{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: white;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+#account-container img{ filter: invert(1); }
+
+#pages-container{ display: flex; gap: 0.5rem; }
+
+.pages-btn{
+    padding: 0.4rem 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+.pages-btn:hover{ background-color: var(--forest-dk); }
+.pages-btn.active{ background-color: var(--coral); border-color: var(--coral); }
+
+#footer{
+    text-align: center;
+    padding: 1.25rem;
+    background-color: var(--forest);
+    color: var(--cream);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 700px){
+    .intro{ flex-direction: column; align-items: center; }
+    .main-title{ font-size: 2.2rem; }
+    #header{ flex-direction: column; gap: 0.5rem; }
+    .card{ padding: 1.5rem; }
+}
+
+.axis-label{
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 14px;
+    fill: var(--muted);
+}

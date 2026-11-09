@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Richy Xie | My Topic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="interactivity.js"></script>
+
+    <div id="header" class="header">
+        <a href="./index.html" class="clickable" id="account-container">
+            <img src="images/icon.svg" width="40" alt="Site icon">
+            <div id="name-container">Richy Xie</div>
+        </a>
+        <nav id="pages-container">
+            <a class="pages-btn clickable" href="./index.html">Home</a>
+            <a class="pages-btn clickable active" href="./topic.html">My Topic</a>
+            <a class="pages-btn clickable" href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <main class="page">
+        <h2 class="page-title">Aviation & Hiking</h2>
+
+        <section class="card">
+            <img class="banner" src="images/plane.jpg" alt="Me sitting in the cockpit of a Cessna on the ramp">
+
+            <p>
+                As a kid, I was always interested in aviation. It might be a bit morbid, but I loved watching documentaries on aviation disasters and seeing how investigators determined the cause. Since then, I've played airplane simulators on my phone (such as Infinite Flight) and spent hours pretending to be a pilot or air traffic controller. There's just something about being in the air that I love. This coincided with my love for the outdoors and hiking, since you can essentially hike anywhere, as long as you can get there.
+            </p>
+            <p>
+                Finally, when I was living and working in Florida, I had the opportunity to start working on my private pilot's license (PPL). It was hands down one of my favorite memories of living in Florida, and honestly, I don't think I would have made it through Florida if I weren't flying (it was so hot and boring). I had the opportunity to learn more about how planes work, master navigation and weather, and so much more. It taught me many great lessons, but the main one I took from it was to always compartmentalize and focus 100% on the task at hand.
+            </p>
+            <p>
+                In the future, I look forward to continuing to fly and eventually making it across the United States. One of my goals is to visit all of the national parks, and hopefully, when I have the time, I'll be able to fly to them all.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>Top 5 Places I've Visited</h3>
+            <ul class="styled-list">
+                <li>Greece</li>
+                <li>France</li>
+                <li>U.K.</li>
+                <li>Turkey</li>
+                <li>Jamaica</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Number of Hours Flown Each Week</h3>
+            <p class="caption">This chart shows how many hours I flew each week while working toward my private pilot's license. Hover over a bar to see its value.</p>
+            <div id="d3-vis"></div>
+        </section>
+
+        <section class="card contact" id="contact">
+            <h3>Contact Me</h3>
+            <ul class="contact-links">
+                <li><a href="mailto:xie.ric@northeastern.edu">Email: xie.ric@northeastern.edu</a></li>
+                <li><a href="https://github.com/AshAttacks" target="_blank">GitHub: AshAttacks</a></li>
+                <li><a href="https://www.linkedin.com/in/richyxie" target="_blank">LinkedIn: richyxie</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="footer" class="footer">
+        <div>&copy; 2026 Richy Xie &middot; Built for DS4200 with HTML, CSS &amp; D3</div>
+    </div>
+
+    <script>
+        modularAddD3VisToPage("d3-vis");
+    </script>
+</body>
+</html>
